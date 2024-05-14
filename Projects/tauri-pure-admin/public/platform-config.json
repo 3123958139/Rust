@@ -1,9 +1,9 @@
 {
   "Version": "5.5.0",
-  "Title": "上位机",
+  "Title": "数据处理中心",
   "FixedHeader": true,
   "HiddenSideBar": false,
-  "MultiTagsCache": false,
+  "MultiTagsCache": true,
   "KeepAlive": true,
   "Layout": "vertical",
   "Theme": "light",

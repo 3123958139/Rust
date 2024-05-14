@@ -1,6 +1,6 @@
 <template>
   <el-config-provider :locale="currentLocale">
-    <router-view :key="key" />
+    <router-view :key="$route.fullPath" />
     <ReDialog />
   </el-config-provider>
 </template>
@@ -21,16 +21,6 @@ export default defineComponent({
   computed: {
     currentLocale() {
       return zhCn;
-    }
-  },
-  setup() {
-    const route = useRoute();
-    const key = computed(() => {
-      return route.path + Math.random();
-    });
-    return {
-      route,
-      key
     }
   }
 });

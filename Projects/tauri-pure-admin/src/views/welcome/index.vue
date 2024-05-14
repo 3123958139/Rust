@@ -1,23 +1,26 @@
 <template>
-  <el-row style="margin-top: 0px;width:100%;height:400px;">
+  <el-row style="margin-top: 0px;width:100%;height:300px;">
     <el-col :span="4">
-      <GuageEcharts :options="option1" height="400px" />
+      <GuageEcharts :options="option1" height="300px" />
     </el-col>
     <el-col :span="4">
-      <GuageEcharts :options="option2" height="400px" />
+      <GuageEcharts :options="option2" height="300px" />
     </el-col>
     <el-col :span="4">
-      <GuageEcharts :options="option3" height="400px" />
+      <GuageEcharts :options="option3" height="300px" />
     </el-col>
     <el-col :span="4">
-      <GuageEcharts :options="option4" height="400px" />
+      <GuageEcharts :options="option4" height="300px" />
     </el-col>
     <el-col :span="4">
-      <GuageEcharts :options="option5" height="400px" />
+      <GuageEcharts :options="option5" height="300px" />
+    </el-col>
+    <el-col :span="4">
+      <GuageEcharts :options="option6" height="300px" />
     </el-col>
   </el-row>
   <el-row style="margin-top: 0px;width:100%;height:300px;">
-    <el-col :span="20">
+    <el-col :span="24">
       <BaseEcharts :options="options" height="300px" />
     </el-col>
   </el-row>
@@ -40,7 +43,7 @@
 }
 
 .grid-content {
-  min-height: 400px;
+  min-height: 300px;
 }
 </style>
 
@@ -59,20 +62,25 @@ const option1 = {
   },
   series: [
     {
-      name: 'Pressure1',
+      name: 'Pressure',
       type: 'gauge',
+      progress: {
+        show: true
+      },
       detail: {
+        valueAnimation: true,
         formatter: '{value}'
       },
       data: [
         {
-          value: 10,
+          value: 50,
           name: 'SCORE'
         }
       ]
     }
   ]
 };
+
 const option2 = {
   tooltip: {
     formatter: '{a} <br/>{b} : {c}%'
@@ -135,6 +143,27 @@ const option4 = {
 };
 
 const option5 = {
+  tooltip: {
+    formatter: '{a} <br/>{b} : {c}%'
+  },
+  series: [
+    {
+      name: 'Pressure2',
+      type: 'gauge',
+      detail: {
+        formatter: '{value}'
+      },
+      data: [
+        {
+          value: 20,
+          name: 'SCORE'
+        }
+      ]
+    }
+  ]
+};
+
+const option6 = {
   tooltip: {
     formatter: '{a} <br/>{b} : {c}%'
   },

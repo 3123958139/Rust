@@ -13,10 +13,10 @@
   "tauri": {
     "windows": [
       {
-        "fullscreen": true,
+        "fullscreen": false,
         "height": 768,
         "resizable": true,
-        "title": "上位机",
+        "title": "数据处理中心",
         "width": 1024
       }
     ],
