@@ -13,10 +13,10 @@
   "tauri": {
     "windows": [
       {
-        "fullscreen": false,
+        "fullscreen": true,
         "height": 768,
         "resizable": true,
-        "title": "tauri-pure-admin",
+        "title": "上位机",
         "width": 1024
       }
     ],

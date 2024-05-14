@@ -1,4 +1,5 @@
 import App from "./App.vue";
+import * as echarts from "echarts";
 import router from "./router";
 import { setupStore } from "@/store";
 import { getPlatformConfig } from "./config";
